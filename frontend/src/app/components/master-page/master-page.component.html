@@ -121,7 +121,7 @@
   <div class="empty-sidenav"><!-- empty sidenav needed to push footer down the screen --></div>
 
   <div class="flex-grow-1 d-flex flex-column">
-    <app-testnet-alert *ngIf="network.val === 'testnet' || network.val === 'testnet4' || network.val === 'signet'"></app-testnet-alert>
+    <app-testnet-alert *ngIf="network.val === '' || network.val === 'testnet' || network.val === 'testnet4' || network.val === 'signet'"></app-testnet-alert>
 
     <main style="min-width: 375px; max-width: 100vw">
       <router-outlet></router-outlet>

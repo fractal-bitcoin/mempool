@@ -8,6 +8,9 @@
       @if (stateService.network === 'testnet4') {
         <span i18n="testnet4-not-finalized">Testnet4 is not yet finalized, and may be reset at anytime.</span>
       }
+      @if (stateService.network === '') {
+        <span >We are now in the public testing stage, the testing data will be reset. And the test assets have no real value.</span>
+      }
     </div>
     <button type="button" class="close" (click)="dismissWarning()">
       <span aria-hidden="true">&times;</span>

@@ -24,7 +24,7 @@
     @if ((viewAmountMode$ | async) === 'btc' || (viewAmountMode$ | async) === 'fiat' || ignoreViewMode === true) {
       &lrm;{{ addPlus && satoshis >= 0 ? '+' : '' }}{{ satoshis / 100000000 | number : digitsInfo }}
       <span class="symbol">
-        <ng-container *ngTemplateOutlet="prefix"></ng-container>BTC
+        <ng-container *ngTemplateOutlet="prefix"></ng-container>tFB
       </span>
     } @else {
       @if (digitsInfo === '1.8-8') {
