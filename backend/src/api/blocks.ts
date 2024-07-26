@@ -308,7 +308,8 @@ class Blocks {
       extras.coinbaseSignatureAscii = null;
     }
 
-    const header = await bitcoinClient.getBlockHeader(block.id, false);
+    let header = await bitcoinClient.getBlockHeader(block.id, false);
+    header = header.slice(0,160);
     extras.header = header;
 
     const coinStatsIndex = indexer.isCoreIndexReady('coinstatsindex');
